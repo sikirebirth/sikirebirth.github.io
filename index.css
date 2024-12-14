@@ -87,3 +87,7 @@ h1{
 .alloem{
     padding: 0 2em;
 }
+.funnyaudio{
+    translate: -20px -80px;
+    border-radius: 8px;
+}
