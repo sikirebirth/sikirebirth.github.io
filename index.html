@@ -10,13 +10,27 @@
 </head>
 <body>
     <div class="maindiv">
-        <audio controls class="funnyaudio" id="funnyaudio">
-            <source src="theelevatorbossanova.mp3" type="audio/mpeg">
-        </audio>
+        <div class="audionpointer">
+            <audio controls class="funnyaudio" id="funnyaudio">
+                <source src="theelevatorbossanova.mp3" type="audio/mpeg">
+            </audio>
+            <img src="clic hier.png" alt="arrow pointing at audio player" class="pointerimg">
+        </div>
         <script>
             funnyaudio.volume = .01;
         </script>
-        <div class="funny"><img src="funi buni icon.jpg" height="200" width="200" alt="a funny bunny" class="borderfunny"/></div>
+        <script>
+            function playsound() {
+            var hellooo = document.getElementById("hellooo");
+            hellooo.autoplay = 'true';
+            hellooo.load();
+            hellooo.volume = .2;
+            }
+        </script>
+        <div class="funny" onclick='playsound()'>
+            <img src="funi buni icon.jpg" height="200" width="200" alt="a funny bunny" class="borderfunny"/>
+            <audio id='hellooo'><source src="NinetyNineMessengerMailOpen.ogg"></audio>
+        </div>
         <h1>Sikibun</h1>
         <p class="e1">
             A 🔞bunny on da interwebs!<br>
@@ -49,8 +63,17 @@
             </a>
         </div>
     </div>
-<audio controls class="funny audio">
-    <source src="theelevatorbossanova.mp3" type="audio/mpeg">
-</audio>
+    <script>
+        function byebye() {
+        var byeee = document.getElementById("byeee");
+        byeee.autoplay = 'true';
+        byeee.load();
+        byeee.volume = .2;
+        }
+    </script>
+<span class="shoutout" onclick="byebye()">
+    website created with the help of &nbsp;<a href="https://psychpsyo.com/" class="psylink" target="_blank">Psychpsyo</a>
+    <audio id='byeee'><source src="NinetyNineMessengerMapSelect.ogg"></audio>
+</span>
 </body>
 </html>

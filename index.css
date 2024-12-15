@@ -66,6 +66,10 @@ h1{
     display: block;
     color: inherit;
     text-decoration: none;
+    transition: transform .05s;
+}
+.socmed:hover{
+    transform: scale(.95);
 }
 .socmed img{
     position: absolute;
@@ -88,6 +92,45 @@ h1{
     padding: 0 2em;
 }
 .funnyaudio{
-    translate: -20px -80px;
+    translate: -10px -80px;
     border-radius: 8px;
+    width: 3em;
+}
+.shoutout{
+    background-color: #0009;
+    width: fit-content;
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    justify-content: end;
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+    max-width: 50em;
+}
+.psylink{
+    text-decoration: none;
+    background-image: 
+    linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet, red); 
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+  animation: rainbow-animation 300s linear infinite;
+}
+
+@keyframes rainbow-animation {
+    to {
+        background-position: 4500vh;
+    }
+}
+.audionpointer{
+    position: absolute;
+}
+.pointerimg{
+    transform: scale(50%);
+    position: absolute;
+    left: -40%;
+    top: -230%;
+    transition: transform .1s;
+}
+.pointerimg:hover{
+    transform: scale(40%);
 }
