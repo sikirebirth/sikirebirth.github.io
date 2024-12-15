@@ -113,7 +113,7 @@ h1{
     linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet, red); 
   -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;  
-  animation: rainbow-animation 300s linear infinite;
+  animation: rainbow-animation 500s linear infinite;
 }
 
 @keyframes rainbow-animation {
