@@ -38,8 +38,8 @@
                 console.log (count)
                 clearTimeout (timeout)
                 timeout = setTimeout (function(){
+                    if (count >= 20) combocountdisplay.innerHTML = "too slow...";
                     count = 0
-                    combocountdisplay.innerHTML = "too slow...";
                 }, 1500)//the number is in ms
                 if (count >= 20){
                     combocountdisplay.innerHTML = "COMBO!!!" + count;
