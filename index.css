@@ -111,16 +111,40 @@ h1{
     text-decoration: none;
     background-image: 
     linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet, red); 
-  -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;  
   animation: rainbow-animation 500s linear infinite;
 }
-
+.combocounter{
+    color: rgb(255, 183, 207);
+    font-size: 2em;
+    font-weight: 600;
+    position: absolute;
+    translate: 0 20px;
+    text-decoration: none;
+    background-image: 
+    linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet, red); 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;  
+  animation: rainbow-animation 500s linear infinite, wiggle .9s linear infinite;
+}
 @keyframes rainbow-animation {
     to {
         background-position: 4500vh;
     }
 }
+@keyframes wiggle {
+    
+    0%{
+        transform: translateX(0)
+    }
+    50%{
+        transform: translatex(40px)
+    }
+    100%{
+        transform: translateX(0);
+    }
+  }
 .audionpointer{
     position: absolute;
 }

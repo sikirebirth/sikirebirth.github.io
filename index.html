@@ -10,27 +10,43 @@
 </head>
 <body>
     <div class="maindiv">
-        <div class="audionpointer">
+        <div class="audionpointer" >
             <audio controls class="funnyaudio" id="funnyaudio">
                 <source src="theelevatorbossanova.mp3" type="audio/mpeg">
             </audio>
             <img src="clic hier.png" alt="arrow pointing at audio player" class="pointerimg">
         </div>
+        <div id="combocountdisplay" class="combocounter">
+            
+        </div>
+
         <script>
             funnyaudio.volume = .01;
         </script>
-        <script>
-            function playsound() {
-            var hellooo = document.getElementById("hellooo");
-            hellooo.autoplay = 'true';
-            hellooo.load();
-            hellooo.volume = .2;
-            }
-        </script>
-        <div class="funny" onclick='playsound()'>
+        <div class="funny" id="btncount">
             <img src="funi buni icon.jpg" height="200" width="200" alt="a funny bunny" class="borderfunny"/>
             <audio id='hellooo'><source src="NinetyNineMessengerMailOpen.ogg"></audio>
         </div>
+        <script>
+            let count = 0;
+            let timeout ;
+            btncount.addEventListener("click",function () {
+                hellooo.autoplay = 'true';
+                hellooo.load();
+                hellooo.volume = .2;
+                count++;
+                console.log (count)
+                clearTimeout (timeout)
+                timeout = setTimeout (function(){
+                    count = 0
+                    combocountdisplay.innerHTML = "too slow...";
+                }, 1500)//the number is in ms
+                if (count >= 20){
+                    combocountdisplay.innerHTML = "COMBO!!!" + count;
+                }
+            })
+                
+        </script>
         <h1>Sikibun</h1>
         <p class="e1">
             A 🔞bunny on da interwebs!<br>
